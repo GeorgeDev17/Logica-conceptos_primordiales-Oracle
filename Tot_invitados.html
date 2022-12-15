@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+<h3>Programa en JS simple para calcular el total de invitados de una fiesta</h3>
+
+<script>
+  
+  //Función para agregar saltos de linea
+  function saltarLinea() {
+    document.write("<br>");
+  }
+
+  //Función cuya finalidad es agregar texto y resultado esperado
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  /*Declaración de variables
+  - La función prompt siempre transforma todo lo que digitamos en el formato del texto,
+  dicha función retorna lo que digitamos como string y ese retorno es pasado para parseInt. 
+  Es esta la función encargada de recibir un string y la convierte en un número.*/
+  var invitados = parseInt(prompt("Número de invitados"));
+  var vips = parseInt(prompt("Número de invitados VIP's"));
+
+  //Operación de los valores agregados por teclado
+  var total = invitados + vips;
+
+  //Mensaje de salida concatenando el resultado total de invitados
+  imprimir("El total de invitados es: " + total);
+</script>

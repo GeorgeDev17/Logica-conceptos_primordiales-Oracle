@@ -3,7 +3,7 @@
 
 <script>
   /*El índice de masa corporal (IMC) se calcula dividiendo el peso 
-de una persona por su altura al cuadrado: IMC = peso / (altura * altura)*/
+  de una persona por su altura al cuadrado: IMC = peso / (altura * altura)*/
 
   //Función para agregar los saltos de linea
   function saltarLinea() {
@@ -17,11 +17,28 @@ de una persona por su altura al cuadrado: IMC = peso / (altura * altura)*/
     saltarLinea();
   }
 
-  var victorias = parseInt (prompt("Ingrese la cantidad de victorias"));
-  var empates = parseInt (prompt("Ingrese la cantidad de empates"));
+  var victorias = parseInt(prompt("Ingrese la cantidad de victorias"));
+  var empates = parseInt(prompt("Ingrese la cantidad de empates"));
 
   var puntosTotal = victorias * 3 + empates;
 
   imprimir("El total de puntos del equipo fue: " + puntosTotal);
+
+  /*Condición que evaluara si el total de puntos es mayor a los obtenidos en la 
+  temporada anterior*/
+  if (puntosTotal > 28) {
+    imprimir("El equipo a progresado a comparación del anterior año");
+  }
+
+  /*Condición que evaluara si el total de puntos es igual a los obtenidos en la 
+  temporada anterior*/
+  if (puntosTotal == 28) {
+    imprimir("El equipo se ha mantenido a comparación del anterior año");
+  }
+
+  /*Condición que evaluara si el total de puntos es menor a los obtenidos en la 
+  temporada anterior*/
+  if (puntosTotal < 28) {
+    imprimir("El equipo a desmejorado a comparación del anterior año");
+  }
 </script>
- 
