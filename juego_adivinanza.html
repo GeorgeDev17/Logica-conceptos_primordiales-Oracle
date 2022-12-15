@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+<h3>Programa Juego de adivinanza</h3>
+
+<script>
+  /*El índice de masa corporal (IMC) se calcula dividiendo el peso
+  de una persona por su altura al cuadrado: IMC = peso / (altura * altura)*/
+
+  //Función para agregar los saltos de linea
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  //Función con parámetros para imprimir texto
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  /*Declaración variables
+  La función Math.random() permite obtener un número aleatorio de punto flotante
+  La función Math.round() permite redondear el número obtenido*/
+  var numeroSistema = Math.round(Math.random() * 10);
+  var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+  if (numeroLanzado == numeroSistema) {
+    imprimir("Excelente, has acertado");
+  } else {
+    imprimir("No has acertado, el número del sistema era " + numeroSistema);
+  }
+</script>
