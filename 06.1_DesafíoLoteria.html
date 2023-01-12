@@ -1,9 +1,14 @@
 <meta charset="UTF-8" />
-<h3>Programa Lotería</h3>
+<h3>Programa Desafío Lotería</h3>
+<!--Desafíos:
+1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, 
+retornando ese valor. De esta forma, en vez de escribir var numeroSistema = Math.round(Math.random()*10,
+escribirás var numeroSistema = sorteo(n);. Realiza esa modificación, creando una nueva función y
+utilízala de forma correcta. -->
 
 <script>
   /*El índice de masa corporal (IMC) se calcula dividiendo el peso
-  de una persona por su altura al cuadrado: IMC = peso / (altura * altura)*/
+  de una persona por su altura al cuadrado: IMC = peso / (altura * altura) */
 
   //Función para agregar los saltos de linea
   function saltarLinea() {
@@ -17,24 +22,21 @@
     saltarLinea();
   }
 
+  function sorteo(n) {
+    return Math.round(Math.random() * 10);
+  }
+
   /*Declaración variables
   La función Math.random() permite obtener un número aleatorio de punto flotante
   La función Math.round() permite redondear el número obtenido*/
-  var numeroSistema = Math.round(Math.random() * 10);
+
+  var numeroSistema = sorteo(10);
   var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
 
+  //Salida del código
   if (numeroLanzado == numeroSistema) {
     imprimir("Excelente, has acertado");
   } else {
     imprimir("No has acertado, el número del sistema era " + numeroSistema);
   }
-
-/*Desafíos:
-1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, 
-retornando ese valor. De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n,
-escribirás var numeroPensado = sorteo(n);. Realiza esa modificación, creando una nueva función y
-utilízala de forma correcta.
-
-2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número lanzado era mayor o menor 
-al número pensando por el programa.*/
 </script>
