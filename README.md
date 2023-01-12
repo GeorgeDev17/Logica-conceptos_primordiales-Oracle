@@ -1,6 +1,6 @@
-Programa formación Oracle Alura Latam
+# Programa formación Oracle Alura Latam
 
-- Lógica de programación: Conceptos primordiales
+# Lógica de programación: Conceptos primordiales
 
 Lo aprendido:
 
